@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+     <style> 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        background-image: url(1032275.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;             
+        justify-content: center;    
+        align-items: center;       
+    }
+
+    form {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        border-radius: 12px;
+        background-color: rgba(255, 255, 255, 0.562);
+        padding: 15px;
+        border: 1px solid white;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.473); 
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        transform: translateX(-400px);
+        animation: slideIn 3s forwards;
+    }
+
+    @keyframes slideIn {
+        to {transform: translateX(0); }
+        }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+    label {
+        margin-bottom: 5px;
+    }
+
+    input {
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ffffff;
+        border-radius: 8px;
+        outline: none;
+    }
+
+    button {
+        padding: 12px;
+        background-color: black;
+        color: #ccc;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    button:hover {
+        background-color: #000000e0;
+    }
+</style>
+</head>
+<body>
+    <form action="home.html" onsubmit="return validar()">
+        
+        <h2>Login</h2>
+
+        <label>E-mail</label>
+        <input type="email" class="campo" name="email" requiered placeholder="Digite seu gmail ou usuário">
+        <br></br>
+
+        <label>Senha</label>
+        <input type="password" class="campo" name="senha" required placeholder="Digite sua senha">
+        <br></br>
+
+        <button type="submit">Enviar</button>
+
+ </form>
+
+ <script>
+    
+    function validar(){
+        gmail = document.getElementById("none").value;
+        senha = document.getElementById("senha").value;
+        if(gmail == "ce9260355@gmail.com" && senha =="1234"){
+            window.location.href = "home.html";
+            return false;
+        }
+        else{
+            alert("Usuário ou senha incorretos!")
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>
